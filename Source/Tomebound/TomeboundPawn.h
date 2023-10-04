@@ -3,17 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
-#include "MyCharacter.generated.h"
+#include "GameFramework/Pawn.h"
+#include "TomeboundPawn.generated.h"
 
 UCLASS()
-class TOMEBOUND_API AMyCharacter : public ACharacter
+class TOMEBOUND_API ATomeboundPawn : public APawn
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
-	AMyCharacter();
+	// Sets default values for this pawn's properties
+	ATomeboundPawn();
 
 protected:
 	// Called when the game starts or when spawned
@@ -25,7 +25,5 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	void Test(int a);
 
 };
