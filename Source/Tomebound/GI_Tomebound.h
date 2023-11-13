@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
-#include "LevelInstance/LevelInstanceComponent.h"
+#include "DebugChat_Widget.h"
 #include "GI_Tomebound.generated.h"
 
 /**
@@ -19,5 +19,11 @@ class TOMEBOUND_API UGI_Tomebound : public UGameInstance
 
 	UFUNCTION(Exec, Category="Commands")
 	void OpenCardCombatLevel(FName targetLevel);
+	
+	UFUNCTION(Exec, Category="Commands")
+	void ClearDebugChat();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "YourCategory")
+	UDebugChat_Widget* DebugChatWidgetReference;
 	
 };

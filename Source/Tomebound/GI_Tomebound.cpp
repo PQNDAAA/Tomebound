@@ -11,4 +11,11 @@ void UGI_Tomebound::OpenCardCombatLevel(FName targetLevel)
 	UGameplayStatics::OpenLevel(GetWorld(),targetLevel);
 }
 
+void UGI_Tomebound::ClearDebugChat()
+{
+	FString StringDebugChat = UDebugChat_Widget().printString;
+	StringDebugChat = nullptr;
+}
+
+
 
