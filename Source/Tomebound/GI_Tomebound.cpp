@@ -16,8 +16,6 @@ void UGI_Tomebound::CallFunctionByName(FString command)
 	this->CallFunctionByNameWithArguments(*command,ar,NULL, true);
 }
 
-
-
 void UGI_Tomebound::OpenCardCombatLevel(FName targetLevel)
 {
 	UGameplayStatics::OpenLevel(GetWorld(),targetLevel);
