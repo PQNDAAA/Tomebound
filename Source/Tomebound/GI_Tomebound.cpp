@@ -21,4 +21,16 @@ void UGI_Tomebound::OpenCardCombatLevel(FName targetLevel)
 	UGameplayStatics::OpenLevel(GetWorld(),targetLevel);
 }
 
+bool UGI_Tomebound::CallFunctionByNameWithParameters(UObject* ObjPtr, FName FunctionName, const TArray<FString>& Parameters)
+{
+
+
+	FString Command = FunctionName.ToString();
+	for (FString Param : Parameters)
+		Command += (" " + Param);
+
+	FOutputDeviceNull Ar;
+	return ObjPtr->CallFunctionByNameWithArguments(*Command, Ar, nullptr, true);
+}
+
 
