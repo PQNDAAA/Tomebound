@@ -19,6 +19,10 @@ class TOMEBOUND_API UGI_Tomebound : public UGameInstance
 	UFUNCTION(Exec, Category="Commands")
 	void OpenCardCombatLevel(FName targetLevel);
 
+
+	UFUNCTION(BlueprintCallable, Category = "Reflection")
+	bool CallFunctionByNameWithParameters(UObject* ObjPtr, FName FunctionName, const TArray<FString>& Parameters);
+
 	UFUNCTION(BlueprintCallable, Category = "DebugChat")
 	void CallFunctionByName(FString command);
 
