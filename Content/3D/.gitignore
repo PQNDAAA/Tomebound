@@ -1,0 +1,7 @@
+# ignore texture and mesh source files
+*.png
+*.fbx
+*.jpg
+*.tga
+*.bmp
+*.obj
